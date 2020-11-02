@@ -14,6 +14,11 @@ function setEventListeners() {
     cart.addEventListener("click", deleteCourse);
 
     emptyCartButton.addEventListener("click", clearCart);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        cartElements = JSON.parse(localStorage.getItem("cartElements")) || []
+        updateCartHTML();
+    })
 }
 
 function clearCart() {
@@ -93,6 +98,12 @@ function updateCartHTML() {
         // agrega html
         cartContainer.appendChild(row);
     })
+
+    syncStorage();
+}
+
+function syncStorage() {
+    localStorage.setItem("cartElements", JSON.stringify(cartElements))
 }
 
 function cleanHTML() {
