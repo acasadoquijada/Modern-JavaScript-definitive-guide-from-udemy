@@ -14,4 +14,5 @@ In order to run the examples, you can use visual studio code and the Live Server
 * [Tweet list](projects/tweet-list/)
 * [Car insurance payment](projects/car-insurance-payment/)
 * [Budget manager](projects/budget-manager/)
+* [Search song](projects/search-song/)
 
